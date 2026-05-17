@@ -165,6 +165,27 @@ export default function BookForm({ book, onSubmit, onCancel }: BookFormProps) {
         />
       </div>
 
+      <div>
+        <label
+          htmlFor="rating"
+          className="block text-sm font-medium label"
+        >
+          Rating
+        </label>
+        <div className="rating rating-lg rating-half" onChange={e => setFormData({ ...formData, rating: Number((e.target as HTMLInputElement).value) })}>
+          <input type="radio" value={0.5} name="rating" className="mask mask-star-2 mask-half-1 bg-green-500" aria-label="0.5 star" />
+          <input type="radio" value={1} name="rating" className="mask mask-star-2 mask-half-2 bg-green-500" aria-label="1 star" />
+          <input type="radio" value={1.5} name="rating" className="mask mask-star-2 mask-half-1 bg-green-500" aria-label="1.5 star" />
+          <input type="radio" value={2} name="rating" className="mask mask-star-2 mask-half-2 bg-green-500" aria-label="2 star" />
+          <input type="radio" value={2.5} name="rating" className="mask mask-star-2 mask-half-1 bg-green-500" aria-label="2.5 star" />
+          <input type="radio" value={3} name="rating" className="mask mask-star-2 mask-half-2 bg-green-500" aria-label="3 star" />
+          <input type="radio" value={3.5} name="rating" className="mask mask-star-2 mask-half-1 bg-green-500" aria-label="3.5 star" />
+          <input type="radio" value={4} name="rating" className="mask mask-star-2 mask-half-2 bg-green-500" aria-label="4 star" />
+          <input type="radio" value={4.5} name="rating" className="mask mask-star-2 mask-half-1 bg-green-500" aria-label="4.5 star" />
+          <input type="radio" value={5} name="rating" className="mask mask-star-2 mask-half-2 bg-green-500" aria-label="5 star" />
+        </div>
+      </div>
+
       <div className="flex justify-end gap-4">
         <button
           type="button"

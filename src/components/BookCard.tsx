@@ -21,9 +21,10 @@ export default function BookCard({ book, onEdit, onDelete }: BookCardProps) {
       <div className="p-4">
         <h3 className="text-lg font-semibold text-primary">{book.title}</h3>
         <p className="text-secondary">{book.author}</p>
-        <p className="text-accent font-semibold mb-2">
+        <p className="text-accent font-semibold">
           {book.currency} {book.price.toFixed(2)}
         </p>
+        <p className="text-base-content mb-2">Rated: {book.rating} / 5</p>
         <p className="text-base-content text-sm line-clamp-3 mb-4">
           {book.description}
         </p>
