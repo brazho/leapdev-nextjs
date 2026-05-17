@@ -6,6 +6,7 @@ import BookCard from "@/components/BookCard";
 import Modal from "@/components/Modal";
 import BookForm from "@/components/BookForm";
 import { Book } from "@/types/book";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Page() {
   const [books, setBooks] = useState<Book[]>(data as Book[]);
@@ -45,16 +46,19 @@ export default function Page() {
   return (
     <main className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold">Book Gallery</h1>
-        <button
-          onClick={() => {
-            setSelectedBook(undefined);
-            setIsModalOpen(true);
-          }}
-          className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
-        >
-          Add New Book
-        </button>
+        <h1 className="text-5xl font-bold text-accent">Book Gallery</h1>
+        <div className="flex items-center">
+          <ThemeToggle />
+          <button
+            onClick={() => {
+              setSelectedBook(undefined);
+              setIsModalOpen(true);
+            }}
+            className="btn btn-primary text-base-200 px-6 py-2 rounded-lg"
+          >
+            Add New Book
+          </button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
