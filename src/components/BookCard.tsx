@@ -4,7 +4,7 @@ import { Book } from "@/types/book";
 interface BookCardProps {
   book: Book;
   onEdit: (book: Book) => void;
-  onDelete: (id: number) => void;
+  onDelete: (book: Book) => void;
 }
 
 export default function BookCard({ book, onEdit, onDelete }: BookCardProps) {
@@ -36,7 +36,7 @@ export default function BookCard({ book, onEdit, onDelete }: BookCardProps) {
             Edit
           </button>
           <button
-            onClick={() => onDelete(book.id)}
+            onClick={() => onDelete(book)}
             className="btn btn-secondary text-base-200 px-4 py-2 rounded"
           >
             Delete

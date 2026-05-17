@@ -3,14 +3,12 @@
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  title: string;
   children: React.ReactNode;
 }
 
 export default function Modal({
   isOpen,
   onClose,
-  title,
   children,
 }: ModalProps) {
   if (!isOpen) return null;
@@ -23,7 +21,6 @@ export default function Modal({
           onClick={onClose}
         />
         <div className="relative bg-base-300 rounded-lg p-6 w-full max-w-lg">
-          <h2 className="text-xl font-semibold mb-4">{title}</h2>
           {children}
         </div>
       </div>

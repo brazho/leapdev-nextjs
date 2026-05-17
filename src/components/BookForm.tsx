@@ -4,12 +4,13 @@ import { Book } from "@/types/book";
 import { FormEvent, useState } from "react";
 
 interface BookFormProps {
+  formHeading: string;
   book?: Book;
   onSubmit: (book: Partial<Book>) => void;
   onCancel: () => void;
 }
 
-export default function BookForm({ book, onSubmit, onCancel }: BookFormProps) {
+export default function BookForm({ formHeading, book, onSubmit, onCancel }: BookFormProps) {
   const [formData, setFormData] = useState<Partial<Book>>(
     book ?? {
       title: "",
@@ -35,6 +36,7 @@ export default function BookForm({ book, onSubmit, onCancel }: BookFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      <h2 className="text-xl font-semibold mb-4">{formHeading}</h2>
       <div>
         <label
           htmlFor="title"
