@@ -12,16 +12,18 @@ Please implement the following:
 
 1. Use a component library to make the UI and UX more appealing and user friendly.
 
-[Explain here why you chose the one you did]
+- Chose DaisyUI for extra styling and components.
+- Supports Tailwind.
+- Used the rating and theme toggle components for ease.
 
-2. Implement dark mode that includes a switcher to go back to light mode.
+1. Implement dark mode that includes a switcher to go back to light mode.
 
-3. Deleting a book displays a JavaScript alert. Replace this with modern UX.
+2. Deleting a book displays a JavaScript alert. Replace this with modern UX.
 
-4. Add a rating system that goes up to 5 stars.
+3. Add a rating system that goes up to 5 stars.
 
-5. There is a bug in the code. Find it and fix it.
+4. There is a bug in the code. Find it and fix it.
 
-[Explain here what the bug was and how you fixed it]
+- When editing details of the books, values are not being updated. This is because on L30, the objects are not spread in the correct order. Properties take the last value assigned.
 
 Good luck and have fun!
